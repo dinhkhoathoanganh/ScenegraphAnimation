@@ -1,0 +1,44 @@
+<scene>
+    <instance name="box" path="models/box.obj"/>
+    <instance name="cylinder" path="models/cylinder.obj"/>
+
+    <group>
+        <transform name="main_arm">
+            <set>
+                <scale>0.5 .2 1.5</scale>
+            </set>
+            <object instanceof="box" texture="metal2">
+                <material>
+                    <ambient>0.3 0.3 0.3</ambient>
+                    <specular>0.2 0.2 0.2</specular>
+                    <diffuse>0.8 0.8 0.8</diffuse>
+                    <shininess>0.1</shininess>
+                </material>
+            </object>
+        </transform>
+
+        <transform name="propeller_stand">
+            <set>
+                <translate>0.0 0.0 -0.5</translate>
+                <scale>0.125 1.0 0.125</scale>
+            </set>
+            <object instanceof="cylinder" texture="metal2">
+                <material>
+                    <ambient>0.6 0.6 0.6</ambient>
+                    <specular>0.2 0.2 0.2</specular>
+                    <diffuse>0.8 0.8 0.8</diffuse>
+                    <shininess>0.4</shininess>
+                </material>
+            </object>
+        </transform>
+
+        <transform>
+            <set>
+                <translate>0.0 1.0 -0.5</translate>
+                <rotate>90 1.0 0.0 0.0</rotate>
+                <scale>0.2 0.2 0.2</scale>
+            </set>
+            <group name="propeller" from="scenegraphmodels/camera/propeller.xml"/>
+        </transform>
+    </group>
+</scene>

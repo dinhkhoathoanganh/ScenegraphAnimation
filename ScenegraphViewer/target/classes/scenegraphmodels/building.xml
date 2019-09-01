@@ -1,0 +1,19 @@
+<scene>
+    <group>
+        <transform>
+            <set>
+                <translate>30 0 0</translate>
+            </set>
+            <group name="building-rectangle" from="scenegraphmodels/building-rectangle.xml">
+            </group>
+        </transform>
+        <transform>
+            <set>
+                <translate>-30 0 0</translate>
+            </set>
+            <group name="building-prism" from="scenegraphmodels/building-prism/building-prism.xml">
+            </group>
+        </transform>
+
+    </group>
+</scene>

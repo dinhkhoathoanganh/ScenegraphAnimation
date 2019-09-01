@@ -1,0 +1,129 @@
+<scene>
+    <instance name="sphere" path="models/sphere"></instance>
+    <instance name="box" path="models/box"></instance>
+
+    <light>
+        <ambient>0.8 0.8 0.8</ambient>
+        <diffuse>0.5 0.5 0.5</diffuse>
+        <specular>0.5 0.5 0.5</specular>
+        <position>0 0 -5</position>
+        <spotangle>30</spotangle>
+        <spotdirection>0 0 -1</spotdirection>
+    </light>
+
+    <transform>
+        <set>
+            <translate>0 0 -20</translate>
+            <scale>50 50 10</scale>
+        </set>
+        <object instanceof="box">
+            <material>
+                <ambient>0.3 0.3 0.3</ambient>
+                <specular>0.7 0.7 0.7</specular>
+                <diffuse>0.7 0.7 0.7</diffuse>
+                <shininess>100</shininess>
+            </material>
+        </object>
+    </transform>
+
+    <!-- <transform>
+        <set>
+            <translate>0 0 -50</translate>
+            <scale>5 5 5</scale>
+        </set>
+
+        <object instanceof="sphere">
+            <material>
+                <ambient>0.3 0.3 0.3</ambient>
+                <specular>0.7 0.7 0.7</specular>
+                <diffuse>0.7 0.7 0.7</diffuse>
+                <shininess>100</shininess>
+            </material>
+        </object>
+    </transform>
+
+    <transform>
+        <set>
+            <translate>-50 0 -50</translate>
+            <scale>5 5 5</scale>
+        </set>
+
+        <object instanceof="sphere">
+            <material>
+                <ambient>0.3 0.3 0.3</ambient>
+                <specular>0.7 0.7 0.7</specular>
+                <diffuse>0.7 0.7 0.7</diffuse>
+                <shininess>100</shininess>
+            </material>
+        </object>
+    </transform>
+
+    <transform>
+        <set>
+            <translate>50 0 -50</translate>
+            <scale>5 5 5</scale>
+        </set>
+
+        <object instanceof="sphere">
+            <material>
+                <ambient>0.3 0.3 0.3</ambient>
+                <specular>0.7 0.7 0.7</specular>
+                <diffuse>0.7 0.7 0.7</diffuse>
+                <shininess>100</shininess>
+            </material>
+        </object>
+    </transform>
+
+    <group>
+        <group>
+            <transform>
+                <set>
+                    <rotate>90 0 1 0</rotate>
+                    <translate>0 0 -50</translate>
+                    <scale>5 5 5</scale>
+                </set>
+
+                <object instanceof="sphere">
+                    <material>
+                        <ambient>1 0.3 0.3</ambient>
+                        <specular>0.7 0.7 0.7</specular>
+                        <diffuse>0.7 0.7 0.7</diffuse>
+                        <shininess>100</shininess>
+                    </material>
+                </object>
+            </transform>
+        </group>
+
+        <transform>
+            <set>
+                <translate>-50 0 0</translate>
+                <scale>5 5 5</scale>
+            </set>
+
+            <object instanceof="sphere">
+                <material>
+                    <ambient>0.3 0.3 0.3</ambient>
+                    <specular>0.7 0.7 0.7</specular>
+                    <diffuse>0.7 0.7 0.7</diffuse>
+                    <shininess>100</shininess>
+                </material>
+            </object>
+        </transform>
+
+        <transform>
+            <set>
+                <translate>50 0 0</translate>
+                <scale>5 5 5</scale>
+            </set>
+
+            <object instanceof="sphere">
+                <material>
+                    <ambient>0.3 0.3 0.3</ambient>
+                    <specular>0.7 0.7 0.7</specular>
+                    <diffuse>0.7 0.7 0.7</diffuse>
+                    <shininess>100</shininess>
+                </material>
+            </object>
+        </transform>
+    </group> -->
+</scene>

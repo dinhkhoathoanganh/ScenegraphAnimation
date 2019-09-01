@@ -1,0 +1,217 @@
+<scene>
+    <instance name="sphere" path="models/sphere.obj"/>
+    <instance name="box" path="models/box.obj"/>
+    <instance name="cylinder" path="models/cylinder.obj"/>
+    <instance name="cone" path="models/cone.obj"/>
+
+
+    <transform>
+        <set>
+            <scale>0.1 0.1 0.1</scale>
+        </set>
+            <group name="body">
+
+        <transform name="main_body">
+            <set>
+                <scale>2.5 1.0 2.5</scale>
+            </set>
+            <object instanceof="box" texture="metal1">
+                <material>
+                    <ambient>0.5 0.5 0.5</ambient>
+                    <specular>0.2 0.2 0.2</specular>
+                    <diffuse>0.8 0.8 0.8</diffuse>
+                    <shininess>0.1</shininess>
+                </material>
+            </object>
+        </transform>
+
+        <transform name="camera_holder">
+            <set>
+                <translate>0.0 0.2 -1.0</translate>
+                <rotate>-90 1.0 0.0 0.0</rotate>
+                <scale>0.3 1.0 0.3</scale>
+            </set>
+            <object instanceof="cylinder" texture="metal2">
+                <material>
+                    <ambient>0.6 0.4 0.4</ambient>
+                    <specular>0.5 0.5 0.5</specular>
+                    <diffuse>0.8 0.8 0.8</diffuse>
+                    <shininess>0.1</shininess>
+                </material>
+            </object>
+        </transform>
+
+        <transform name="light_holder">
+            <set>
+                <translate>0.0 0.5 -0.5</translate>
+            </set>
+            <group>
+                <transform name="light_stand">
+                    <set>
+                        <scale>0.1 1.25 0.1</scale>
+                    </set>
+                    <object instanceof="cylinder" texture="metal2">
+                        <material>
+                            <ambient>0.5 0.5 0.5</ambient>
+                    <specular>0.5 0.5 0.5</specular>
+                    <diffuse>0.8 0.8 0.8</diffuse>
+                    <shininess>0.5</shininess>
+                        </material>
+                    </object>
+                </transform>
+
+                <transform name="light_holder_cone">
+                    <set>
+                        <translate>0.0 1.25 -0.125</translate>
+                        <rotate>90 1.0 0.0 0.0</rotate>
+                        <scale>0.1 0.1 0.1</scale>
+                    </set>
+                    <object instanceof="cone">
+                        <material>
+                            <color>1.0 1.0 0.0</color>
+                        </material>
+                    </object>
+                </transform>
+            </group>
+        </transform>
+
+        <transform name="left_leg">
+            <set>
+                <translate>-1.0 0.0 0.0</translate>
+            </set>
+            <group>
+                <transform name="left_front_pole">
+                    <set>
+                        <translate>0.0 -1.0 1.0</translate>
+                        <scale>0.1 1.0 0.1</scale>
+                    </set>
+                    <object instanceof="cylinder" texture="metal2">
+                        <material>
+                            <ambient>0.5 0.5 0.5</ambient>
+                    <specular>0.5 0.5 0.5</specular>
+                    <diffuse>0.8 0.8 0.8</diffuse>
+                    <shininess>0.5</shininess>
+                        </material>
+                    </object>
+                </transform>
+
+                <transform name="left_back_pole">
+                    <set>
+                        <translate>0.0 -1.0 -1.0</translate>
+                        <scale>0.1 1.0 0.1</scale>
+                    </set>
+                    <object instanceof="cylinder" texture="metal2">
+                        <material>
+                            <ambient>0.5 0.5 0.5</ambient>
+                    <specular>0.5 0.5 0.5</specular>
+                    <diffuse>0.8 0.8 0.8</diffuse>
+                    <shininess>0.5</shininess>
+                        </material>
+                    </object>
+                </transform>
+
+                <transform name="left_pole_connect">
+                    <set>
+                        <translate>0.0 -0.95 -1.0</translate>
+                        <rotate>90.0 1.0 0.0 0.0</rotate>
+                        <scale>0.1 2.0 0.1</scale>
+                    </set>
+                    <object instanceof="cylinder" texture="metal2">
+                        <material>
+                            <ambient>0.5 0.5 0.5</ambient>
+                    <specular>0.5 0.5 0.5</specular>
+                    <diffuse>0.8 0.8 0.8</diffuse>
+                    <shininess>0.5</shininess>
+                        </material>
+                    </object>
+                </transform>
+            </group>
+        </transform>
+
+        <transform name="right_leg">
+            <set>
+                <translate>1.0 0.0 0.0</translate>
+            </set>
+            <group>
+                <transform name="right_front_pole">
+                    <set>
+                        <translate>0.0 -1.0 1.0</translate>
+                        <scale>0.1 1.0 0.1</scale>
+                    </set>
+                    <object instanceof="cylinder" texture="metal2">
+                        <material>
+                            <ambient>0.5 0.5 0.5</ambient>
+                    <specular>0.5 0.5 0.5</specular>
+                    <diffuse>0.8 0.8 0.8</diffuse>
+                    <shininess>0.5</shininess>
+                        </material>
+                    </object>
+                </transform>
+
+                <transform name="right_back_pole">
+                    <set>
+                        <translate>0.0 -1.0 -1.0</translate>
+                        <scale>0.1 1.0 0.1</scale>
+                    </set>
+                    <object instanceof="cylinder" texture="metal2">
+                        <material>
+                            <ambient>0.5 0.5 0.5</ambient>
+                    <specular>0.5 0.5 0.5</specular>
+                    <diffuse>0.8 0.8 0.8</diffuse>
+                    <shininess>0.5</shininess>
+                        </material>
+                    </object>
+                </transform>
+
+                <transform name="right_pole_connect">
+                    <set>
+                        <translate>0.0 -0.95 -1.0</translate>
+                        <rotate>90.0 1.0 0.0 0.0</rotate>
+                        <scale>0.1 2.0 0.1</scale>
+                    </set>
+                    <object instanceof="cylinder" texture="metal2">
+                        <material>
+                            <ambient>0.5 0.5 0.5</ambient>
+                    <specular>0.5 0.5 0.5</specular>
+                    <diffuse>0.8 0.8 0.8</diffuse>
+                    <shininess>0.5</shininess>
+                        </material>
+                    </object>
+                </transform>
+            </group>
+        </transform>
+
+        <transform>
+            <set>
+                <translate>-1.25 0.3 -1.25</translate>
+                <rotate>45.0 0.0 1.0 0.0</rotate>
+            </set>
+            <group name="front_left_arm" from="scenegraphmodels/camera/drone-arm.xml"/>
+        </transform>
+
+        <transform>
+            <set>
+                <translate>1.25 0.3 -1.25</translate>
+                <rotate>-45.0 0.0 1.0 0.0</rotate>
+            </set>
+            <group name="front_right_arm" from="scenegraphmodels/camera/drone-arm.xml"/>
+        </transform>
+
+        <transform>
+            <set>
+                <translate>-1.25 0.3 1.25</translate>
+                <rotate>135.0 0.0 1.0 0.0</rotate>
+            </set>
+            <group name="back_left_arm" from="scenegraphmodels/camera/drone-arm.xml"/>
+        </transform>
+
+        <transform>
+            <set>
+                <translate>1.25 0.25 1.25</translate>
+                <rotate>-135.0 0.0 1.0 0.0</rotate>
+            </set>
+            <group name="back_right_arm" from="scenegraphmodels/camera/drone-arm.xml"/>
+        </transform>
+    </group>
+    </transform>
+</scene>

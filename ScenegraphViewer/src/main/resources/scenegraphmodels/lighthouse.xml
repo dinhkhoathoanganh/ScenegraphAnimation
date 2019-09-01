@@ -1,0 +1,81 @@
+<scene>
+    <instance name="sphere" path="models/sphere"></instance>
+    <instance name="cylinder" path="models/cylinder"></instance>
+    <instance name="cone" path="models/cone"></instance>
+
+    <group>
+        <transform>
+            <set>
+                <scale>1 5 1</scale>
+            </set>
+            <object instanceof="cylinder" texture="brick1">
+                <material>
+                    <ambient>0.5 0.5 0.5</ambient>
+                    <specular>0.2 0.2 0.2</specular>
+                    <diffuse>0.8 0.8 0.8</diffuse>
+                    <shininess>0.1</shininess>
+                </material>
+            </object>
+        </transform>
+
+        <transform>
+            <set>
+                <translate>0 6 0</translate>
+                <scale>1.5 2 1.5</scale>
+            </set>
+            <object instanceof="cone" texture="roof1">
+                <material>
+                    <ambient>0.5 0.5 0.5</ambient>
+                    <specular>0.2 0.2 0.2</specular>
+                    <diffuse>0.8 0.8 0.8</diffuse>
+                    <shininess>0.1</shininess>
+                </material>
+            </object>
+        </transform>
+
+        <transform name="lighthouse-light">
+            <set>
+                <translate>0 5.5 0</translate>
+                <rotate>90 0 0 1</rotate>
+            </set>
+            <light>
+                <ambient>1 1 0.0</ambient>
+                <diffuse>0.5 0.5 0.0</diffuse>
+                <specular>0.5 0.5 0.0</specular>
+                <position>0 0.75 0</position>
+                <spotangle>30</spotangle>
+                <spotdirection>0 -1 0</spotdirection>
+            </light>
+            <group>
+                <transform>
+                    <set>
+                        <scale>0.5 0.5 0.5</scale>
+                    </set>
+                    <object instanceof="cone">
+                        <material>
+                            <ambient>0.6 0.6 0.0</ambient>
+                            <specular>0.2 0.2 0.0</specular>
+                            <diffuse>0.8 0.8 0.0</diffuse>
+                            <shininess>0.1</shininess>
+                        </material>
+                    </object>
+                </transform>
+
+                <transform>
+                    <set>
+                        <translate>0 0.14 0</translate>
+                        <scale>0.38 0.38 0.38</scale>
+                    </set>
+                    <object instanceof="cone">
+                        <material>
+                            <ambient>0 0 0.0</ambient>
+                            <specular>0 0 0.0</specular>
+                            <diffuse>0 0 0.0</diffuse>
+                            <shininess>0</shininess>
+                        </material>
+                    </object>
+                </transform>
+            </group>
+        </transform>
+    </group>
+</scene>

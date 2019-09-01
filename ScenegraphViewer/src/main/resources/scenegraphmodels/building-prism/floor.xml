@@ -1,0 +1,53 @@
+<scene>
+    <instance name="box" path="models/box.obj"/>
+    <group name="floor-with-ceiling">
+        <transform>
+            <set>
+                <translate>0 8 15</translate>
+                <rotate>32 1 0 0</rotate>
+            </set>
+            <group name="front-wall" from="scenegraphmodels/building-prism/wall.xml">
+            </group>
+        </transform>
+        <transform>
+            <set>
+                <translate>0 8 -15</translate>
+                <rotate>-32 1 0 0</rotate>
+            </set>
+            <group name="back-wall" from="scenegraphmodels/building-prism/wall.xml">
+            </group>
+        </transform>
+        <transform>
+            <set>
+                <translate>-15 8 0</translate>
+                <rotate>32 0 0 1</rotate>
+                <rotate>90 0 1 0</rotate>
+            </set>
+            <group name="left-wall" from="scenegraphmodels/building-prism/wall-see-through.xml">
+            </group>
+        </transform>
+        <transform>
+            <set>
+                <translate>15 8 0</translate>
+                <rotate>-32 0 0 1</rotate>
+                <rotate>90 0 1 0</rotate>
+            </set>
+            <group name="right-wall" from="scenegraphmodels/building-prism/wall-see-through.xml">
+            </group>
+        </transform>
+        <transform name="ceiling">
+            <set>
+                <translate>0 15.65 0</translate>
+                <scale>40 1 40</scale>
+            </set>
+            <object instanceof="box" texture="metal">
+                <material>
+                    <ambient>0.3 0.3 0.3</ambient>
+                        <specular>0.5 0.5 0.5</specular>
+                        <diffuse>0.5 0.5 0.5</diffuse>
+                        <shininess>0.1</shininess>
+                </material>
+            </object>
+        </transform>
+    </group>
+</scene>

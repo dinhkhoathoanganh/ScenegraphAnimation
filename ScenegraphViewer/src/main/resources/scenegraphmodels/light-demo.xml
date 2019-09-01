@@ -1,0 +1,36 @@
+<scene>
+    <instance name="sphere" path="models/sphere"></instance>
+    <instance name="box" path="models/box"></instance>
+    <image name="white" path="textures/white.png"/>
+
+    <group>
+        <transform>
+            <set>
+            </set>
+            <light>
+                <ambient>0.6 0.6 0.6</ambient>
+                <diffuse>0 0 0</diffuse>
+                <specular>0 0 0</specular>
+                <position>0 20 0</position>
+                <spotangle>30</spotangle>
+                <spotdirection>0 -1 0</spotdirection>
+            </light>
+        </transform>
+
+        <transform>
+            <set>
+                <translate>0 -.5 0</translate>
+                <scale>100 1 100</scale>
+            </set>
+
+            <object instanceof="box">
+                <material>
+                    <ambient>0.6 0.6 0.0</ambient>
+                    <specular>0.5 0.5 0.5</specular>
+                    <diffuse>0.5 0.5 0.5</diffuse>
+                    <shininess>0.1</shininess>
+                </material>
+            </object>
+        </transform>
+    </group>
+</scene>

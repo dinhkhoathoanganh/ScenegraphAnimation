@@ -1,0 +1,4 @@
+xml: scenegraphmodels/light-demo.xml
+eye: 0 0 40
+center: 0 0 0
+rotation: 0

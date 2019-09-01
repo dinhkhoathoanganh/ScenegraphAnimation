@@ -1,0 +1,4 @@
+xml : scenegraphmodels/building.xml
+eye: 100 70 100
+center: 0 50 0
+rotation: -35

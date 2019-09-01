@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<scene>
+    <instance name="box" path="models/box.obj"/>
+    <instance name="half-prism" path="models/half-prism.obj"/>
+    <transform>
+        <set>
+            <scale>1 1 1 1</scale>
+        </set>
+        <group name="wall-with-window-see-through">
+            <transform>
+                <set></set>
+                <group>
+                    <group name="left-frame">
+                        <transform>
+                            <set>
+                                <rotate>180 0 0 1</rotate>
+                                <scale>40 17.3205 1</scale>
+                            </set>
+                            <object instanceof="half-prism" texture="metal">
+                                <material>
+                                    <ambient>0.4 0.4 0.5</ambient>
+                        <specular>0.5 0.5 0.5</specular>
+                        <diffuse>0.5 0.5 0.5</diffuse>
+                        <shininess>0.2</shininess>
+                                </material>
+                            </object>
+                        </transform>
+                    </group>
+                    <group name="right-frame">
+                        <transform>
+                            <set>
+                                <rotate>180 1 0 0</rotate>
+                                <scale>40 17.3205 1</scale>
+                            </set>
+                            <object instanceof="half-prism" texture="metal">
+                                <material>
+                                    <ambient>0.4 0.4 0.5</ambient>
+                        <specular>0.5 0.5 0.5</specular>
+                        <diffuse>0.5 0.5 0.5</diffuse>
+                        <shininess>0.2</shininess>
+                                </material>
+                            </object>
+                        </transform>
+                    </group>
+                    <group name="up-frame">
+                        <transform>
+                            <set>
+                                <translate>0 6.4 0</translate>
+                                <scale>30 4.66 0.95</scale>
+                            </set>
+                            <object instanceof="box" texture="metal">
+                                <material>
+                                    <ambient>0.4 0.4 0.5</ambient>
+                        <specular>0.5 0.5 0.5</specular>
+                        <diffuse>0.5 0.5 0.5</diffuse>
+                        <shininess>0.2</shininess>
+                                </material>
+                            </object>
+                        </transform>
+                    </group>
+                    <group name="down-frame">
+                        <transform>
+                            <set>
+                                <translate>0 -6.4 0</translate>
+                                <scale>15 4.66 0.95</scale>
+                            </set>
+                            <object instanceof="box" texture="metal">
+                                <material>
+                                    <ambient>0.4 0.4 0.5</ambient>
+                        <specular>0.5 0.5 0.5</specular>
+                        <diffuse>0.5 0.5 0.5</diffuse>
+                        <shininess>0.2</shininess>
+                                </material>
+                            </object>
+                        </transform>
+                    </group>
+                </group>
+            </transform>
+        </group>
+    </transform>
+</scene>

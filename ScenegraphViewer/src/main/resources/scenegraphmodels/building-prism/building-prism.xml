@@ -1,0 +1,26 @@
+<scene>
+    <group name="building-prism">
+        <transform>
+            <set>
+                <translate>0 0 0</translate>
+            </set>
+            <group name="1st-floor" from="scenegraphmodels/building-prism/floor.xml">
+            </group>
+        </transform>
+        <transform>
+            <set>
+                <rotate>90 0 1 0</rotate>
+                <translate>0 15.65 0</translate>
+            </set>
+            <group name="2nd-floor" from="scenegraphmodels/building-prism/floor.xml">
+            </group>
+        </transform>
+        <transform>
+            <set>
+                <translate>0 31.3 0</translate>
+            </set>
+            <group name="3rd-floor" from="scenegraphmodels/building-prism/floor.xml">
+            </group>
+        </transform>
+    </group>
+</scene>

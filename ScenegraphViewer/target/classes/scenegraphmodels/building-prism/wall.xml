@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<scene>
+    <instance name="box" path="models/box.obj"/>
+    <instance name="prism" path="models/prism.obj"/>
+    <transform>
+        <set>
+            <scale>1 1 1 1</scale>
+        </set>
+        <group name="wall-with-window">
+            <transform>
+                <set></set>
+                <group>
+                    <group name="prism-wall">
+                        <transform>
+                            <set>
+                                <rotate>180 0 0 1</rotate>
+                                <scale>40 17.3205 1</scale>
+                            </set>
+                            <object instanceof="prism">
+                                <material>
+                                    <color>0.5 0.5 0.6 </color>
+                                </material>
+                            </object>
+                        </transform>
+                    </group>
+                    <group name="window">
+                        <transform>
+                            <set>
+                                <scale>10 8 1.2</scale>
+                            </set>
+                            <object instanceof="box">
+                                <material>
+                                    <color>0.5 0 0</color>
+                                </material>
+                            </object>
+                        </transform>
+                    </group>
+                </group>
+            </transform>
+        </group>
+    </transform>
+</scene>

@@ -1,0 +1,33 @@
+<scene>
+    <instance name="sphere" path="models/sphere"></instance>
+    <instance name="box" path="models/box"></instance>
+    <image name="white" path="textures/white.png"/>
+    <image name="earthmap" path="textures/earthmap.png" />
+    <image name="checkerboard" path="textures/checkerboard.png" />
+
+
+    <light>
+        <ambient>0.8 0.8 0.8</ambient>
+        <diffuse>0.5 0.5 0.5</diffuse>
+        <specular>0.5 0.5 0.5</specular>
+        <position>0 0 10</position>
+        <spotangle>180</spotangle>
+        <spotdirection>0 0 -1</spotdirection>
+    </light>
+
+    <transform>
+        <set>
+            <translate>0 0 -50</translate>
+            <scale>50 50 50</scale>
+        </set>
+        <object instanceof="sphere" texture="earthmap">
+            <material>
+                <ambient>0.3 0.3 0.3</ambient>
+                <specular>0.7 0.7 0.7</specular>
+                <diffuse>0.7 0.7 0.7</diffuse>
+                <shininess>10</shininess>
+            </material>
+        </object>
+    </transform>
+
+</scene>

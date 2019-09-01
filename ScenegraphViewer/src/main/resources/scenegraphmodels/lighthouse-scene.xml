@@ -1,0 +1,160 @@
+<scene>
+    <instance name="box" path="models/box"></instance>
+    <instance name="sphere" path="models/sphere"></instance>
+    <instance name="cylinder" path="models/cylinder"></instance>
+    <image name="white" path="textures/white.png"/>
+    <!--ground texture-->
+    <image name="grass" path="textures/grass.jpg" />
+    <image name="water" path="textures/water.jpg" />
+    <!--building texture-->
+    <image name="brick" path="textures/brick.jpg" />
+    <image name="metal" path="textures/metal.jpg" />
+    <image name="wood" path="textures/wood.jpg" />
+    <image name="roof" path="textures/roof.jpg" />
+    <image name="window-brick" path="textures/window-brick.jpg" />
+    <image name="window-glass" path="textures/window-glass.jpg" />
+    <!--camera texture-->
+    <image name="metal1" path="textures/metal1.jpg" />
+    <image name="metal2" path="textures/metal2.jpg" />
+    <!--lighthouse texture-->
+    <image name="brick1" path="textures/brick1.jpg"/>
+    <image name="roof1" path="textures/roof1.jpg"/>
+
+
+    <!-- <light>
+        <ambient>0.7 0.7 0.7</ambient>
+        <diffuse>0.1 0.1 0.1</diffuse>
+        <specular>0.1 0.1 0.1</specular>
+        <position>0 0 0</position>
+        <spotangle>180</spotangle>
+        <spotdirection>0 0 1</spotdirection>
+    </light> -->
+    <group>
+        <transform name="camera">
+            <set>
+                <scale>0.005 0.005 0.005</scale>
+            </set>
+            <group from="scenegraphmodels/camera/drone.xml"/>
+        </transform>
+    </group>
+
+    <!--<group name="background_cylinder">-->
+        <!--<transform>-->
+            <!--<set>-->
+                <!--<translate>0 -25 0</translate>-->
+                <!--<scale>100 100 100</scale>-->
+            <!--</set>-->
+
+            <!--<object instanceof="cylinder">-->
+                <!--<material>-->
+                    <!--<ambient>0.3 0.3 0.3</ambient>-->
+                    <!--<specular>0.5 0.5 0.5</specular>-->
+                    <!--<diffuse>0.5 0.5 0.5</diffuse>-->
+                    <!--<shininess>0.1</shininess>-->
+                <!--</material>-->
+            <!--</object>-->
+        <!--</transform>-->
+    <!--</group>-->
+
+    <group name="grass_plane">
+        <transform>
+            <set>
+                <translate>0 -.5 40</translate>
+                <scale>100 1 100</scale>
+            </set>
+
+            <object instanceof="box" texture="grass">
+                <material>
+                    <ambient>0.6 0.6 0.0</ambient>
+                    <specular>0.5 0.5 0.5</specular>
+                    <diffuse>0.5 0.5 0.5</diffuse>
+                    <shininess>0.1</shininess>
+                </material>
+            </object>
+        </transform>
+    </group>
+
+    <group name="water_plane">
+        <transform>
+            <set>
+                <translate>0 -.5 -35</translate>
+                <scale>100 1 50</scale>
+            </set>
+
+            <object instanceof="box" texture="water">
+                <material>
+                    <ambient>0.0 0.2 0.8</ambient>
+                    <specular>0.5 0.5 0.5</specular>
+                    <diffuse>0.5 0.5 0.5</diffuse>
+                    <shininess>5</shininess>
+                </material>
+            </object>
+        </transform>
+    </group>
+
+    <group name="moon">
+        <transform>
+            <set>
+                <translate>0 50 -100</translate>
+            </set>
+            <light>
+                <ambient>0.8 0.8 0.8</ambient>
+                <diffuse>0.1 0.1 0.1</diffuse>
+                <specular>0 0 0</specular>
+                <position>0 -20 20</position>
+                <spotangle>45</spotangle>
+                <spotdirection>0 -1 1</spotdirection>
+            </light>
+
+            <light>
+                <ambient>0.7 0.7 0.7</ambient>
+                <diffuse>0.1 0.1 0.1</diffuse>
+                <specular>0.1 0.1 0.1</specular>
+                <position>0 -40 30</position>
+                <spotangle>90</spotangle>
+                <spotdirection>0 1 -1</spotdirection>
+            </light>
+
+            <group>
+                <transform>
+                    <set>
+                        <scale>20 20 20</scale>
+                    </set>
+                    <object instanceof="sphere">
+                        <material>
+                            <ambient>0.9 0.9 0.9</ambient>
+                            <specular>0.5 0.5 0.5</specular>
+                            <diffuse>0.5 0.5 0.5</diffuse>
+                            <shininess>0.1</shininess>
+                        </material>
+                    </object>
+                </transform>
+            </group>
+        </transform>
+    </group>
+
+    <transform>
+        <set>
+            <translate>0 0 -3</translate>
+            <scale>2 2 2</scale>
+        </set>
+        <group name="lighthouse" from="scenegraphmodels/lighthouse.xml"/>
+    </transform>
+
+    <transform>
+        <set>
+            <translate>0 .5 15</translate>
+            <scale>.02 .02 .02</scale>
+        </set>
+        <group name="person" from="scenegraphmodels/humanoid-Y.xml"/>
+    </transform>
+
+    <transform>
+        <set>
+            <translate>0 0 2</translate>
+            <scale>.2 .2 .2</scale>
+        </set>
+        <group name="2-buildings" from="scenegraphmodels/building.xml"/>
+    </transform>
+
+</scene>

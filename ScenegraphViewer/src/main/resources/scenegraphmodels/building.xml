@@ -1,0 +1,34 @@
+<scene>
+    <group>
+        <transform>
+            <set>
+                <translate>0 -100 0</translate>
+                <scale>10000 1 10000</scale>
+            </set>
+            <light>
+                <ambient>0.8 0.8 0.8</ambient>
+                <diffuse>0.8 0.8 0.8</diffuse>
+                <specular>0.8 0.8 0.8</specular>
+                <position>0 100 0</position>
+                <spotangle>25</spotangle>
+                <spotdirection>0 1 0</spotdirection>
+            </light>
+        </transform>
+
+        <transform>
+            <set>
+                <translate>90 0 0</translate>
+            </set>
+            <group name="building-rectangle" from="scenegraphmodels/building-rectangle.xml">
+            </group>
+        </transform>
+        <transform>
+            <set>
+                <translate>-90 0 0</translate>
+            </set>
+            <group name="building-prism" from="scenegraphmodels/building-prism/building-prism.xml">
+            </group>
+        </transform>
+
+    </group>
+</scene>

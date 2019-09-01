@@ -1,0 +1,4 @@
+xml : scenegraphmodels/drone.xml
+eye: 0 70 25
+center: 0 50 0
+rotation: -35

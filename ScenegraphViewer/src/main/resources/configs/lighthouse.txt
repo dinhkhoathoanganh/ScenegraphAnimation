@@ -1,0 +1,6 @@
+xml: scenegraphmodels/lighthouse-scene.xml
+eye: 0 10 28
+center: 0 5 1
+rotation: 0
+drone_translate: 0 10 25
+drone_rotate: 0 0 0

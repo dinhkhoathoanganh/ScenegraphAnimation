@@ -1,0 +1,78 @@
+<scene>
+    <instance name="box" path="models/box.obj"/>
+    <instance name="sphere" path="models/sphere.obj"/>
+
+    <transform name="transform">
+        <group name="blades">
+            <transform>
+                <set>
+                    <scale>0.5 0.5 0.5</scale>
+                </set>
+                <group name="center_sphere">
+                    <object instanceof="sphere">
+                        <material>
+                            <color>0.0 0.0 0.0</color>
+                        </material>
+                    </object>
+                </group>
+            </transform>
+            <transform>
+                <set>
+                    <translate>0.0 2.0 0.0</translate>
+                    <scale>1.5 4.0 0.1</scale>
+                </set>
+                <group name="blade_top">
+                    <object instanceof="box">
+                        <material>
+                            <color>0.0 0.0 0.0</color>
+                        </material>
+                    </object>
+                </group>
+            </transform>
+
+            <transform>
+                <set>
+                    <translate>0.0 -2.0 0.0</translate>
+                    <scale>1.5 4.0 0.1</scale>
+                </set>
+                <group name="blade_bot">
+                    <object instanceof="box">
+                        <material>
+                            <color>0.0 0.0 0.0</color>
+                        </material>
+                    </object>
+                </group>
+            </transform>
+
+            <transform>
+                <set>
+                    <rotate>90 0.0 0.0 1.0</rotate>
+                    <translate>0.0 2.0 0.0</translate>
+                    <scale>1.5 4.0 0.1</scale>
+                </set>
+                <group name="blade_left">
+                    <object instanceof="box">
+                        <material>
+                            <color>0.0 0.0 0.0</color>
+                        </material>
+                    </object>
+                </group>
+            </transform>
+
+            <transform>
+                <set>
+                    <rotate>90.0 0.0 0.0 1.0</rotate>
+                    <translate>0.0 -2.0 0.0</translate>
+                    <scale>1.5 4.0 0.1</scale>
+                </set>
+                <group name="blade_right">
+                    <object instanceof="box">
+                        <material>
+                            <color>0.0 0.0 0.0</color>
+                        </material>
+                    </object>
+                </group>
+            </transform>
+        </group>
+    </transform>
+</scene>
